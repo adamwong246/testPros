@@ -1,0 +1,4 @@
+docker build -t adamwong246/test-pros .
+watch -n 1 docker ps
+docker attach $(docker run -i -p 49160:8080 -d adamwong246/test-pros)
+docker attach $(docker run -i -p 49160:8080 -d adamwong246/test-pros npm test)
